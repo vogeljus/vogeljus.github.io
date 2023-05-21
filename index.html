@@ -3,11 +3,11 @@
     <head>
         <title>Weather Forecast</title>
         <script>
-            fetch('https://api.open-meteo.com/v1/forecast?latitude=49.49&longitude=8.54&hourly=temperature_2m')
+            fetch('https://api.open-meteo.com/v1/forecast?latitude=48.137154&longitude=11.576124&hourly=temperature_2m')
               .then(response => response.json())
               .then(data => {
                 const weatherContainer = document.getElementById('weather-container');
-                const temperature = data.temperature;
+                const temperature = data.data[0].temperature_2m;
                 weatherContainer.innerHTML = `<p>The current temperature is ${temperature} degrees Celsius.</p>`;
               });
         </script>
@@ -16,5 +16,3 @@
         <div id="weather-container"></div>
     </body>
 </html>
-
-
