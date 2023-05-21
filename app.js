@@ -4,7 +4,7 @@ const weatherInfo = document.querySelector('#weather-info');
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const city = event.target.elements.city.value;
-  const apiKey = 'YOUR_API_KEY_HERE';
+  const apiKey = 'Y9dca074d193147da86f110430232105';
   const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3`;
 
   try {
