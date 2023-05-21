@@ -10,9 +10,10 @@ form.addEventListener('submit', async (event) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const { temp_c, humidity, wind_kph } = data.current;
+    const { temp_c, cloud, humidity, wind_kph } = data.current;
     weatherInfo.innerHTML = `
       <p>Temperature: ${temp_c}°C</p>
+      <p> Cloud: ${cloud}</p>
       <p>Humidity: ${humidity}%</p>
       <p>Wind Speed: ${wind_kph} kph</p>
     `;
