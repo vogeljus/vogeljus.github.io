@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Weather Forecast</title>
-        <script>
-            fetch('http://localhost:3000/weather')
-              .then(response => response.json())
-              .then(data => {
-                const weatherContainer = document.getElementById('weather-container');
-                const temperature = data.hourly.temperature_2m[0];
-                weatherContainer.innerHTML = `<p>The current temperature is ${temperature} degrees Celsius.</p>`;
-              });
-        </script>
-    </head>
-    <body>
-        <div id="weather-container"></div>
-    </body>
+  <head>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <h1>Weather App</h1>
+    <form>
+      <label for="city">Enter a city:</label>
+      <input type="text" id="city" name="city">
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weather-info"></div>
+    <script src="app.js"></script>
+  </body>
 </html>
