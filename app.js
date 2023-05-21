@@ -19,7 +19,7 @@ form.addEventListener('submit', async (event) => {
       forecastHtml += `
         <div>
           <h3>${date}</h3>
-          <p>High: ${maxtemp_c}°C</p>
+          <<p>High: ${maxtemp_c}°C</p>
           <p>Low: ${mintemp_c}°C</p>
           <p>Condition: ${condition.text}</p>
         </div>
